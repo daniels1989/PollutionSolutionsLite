@@ -165,19 +165,3 @@ data.raw["module"]["effectivity-module"].limitation_message_key = "efficiency-mo
 data.raw["module"]["effectivity-module-2"].limitation_message_key = "efficiency-module-only-on-polluters"
 data.raw["module"]["effectivity-module-3"].limitation_message_key = "efficiency-module-only-on-polluters"
 --]]
-
-if mods["Atlas_NormalOresForAngels"] then
-	data.raw["recipe"]["sort-gem-ore"]["hidden"] = true
-	data.raw["recipe"]["gem-to-crystal-dust-ore"]["hidden"] = true
-	data.raw["recipe"]["gem-to-crystal-dust-ruby"]["hidden"] = true
-	data.raw["recipe"]["gem-to-crystal-dust-sapphire"]["hidden"] = true
-	data.raw["recipe"]["gem-to-crystal-dust-emerald"]["hidden"] = true
-	data.raw["recipe"]["gem-to-crystal-dust-amethyst"]["hidden"] = true
-	data.raw["recipe"]["gem-to-crystal-dust-topaz"]["hidden"] = true
-	data.raw["recipe"]["gem-to-crystal-dust-diamond"]["hidden"] = true
-end
-
-if mods["NauvisDay"] then
-	data.raw["recipe"]["greenhouse"]["hidden"] = true
-	data.raw["recipe"]["greenhouse-action"]["hidden"] = true
-end
