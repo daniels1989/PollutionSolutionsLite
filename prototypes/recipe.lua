@@ -89,7 +89,7 @@ data:extend({
 		category = "chemistry",
 		enabled = false,
 		energy_required = 10,
-		ingredients = 
+		ingredients =
 		{
 			{type="item", name="blue-xenomass", amount=FILTER_PER_LIQUIFY},
 			{type="fluid", name="polluted-air", amount=SLUDGE_PER_FILTER * AIR_PER_SLUDGE },
@@ -100,7 +100,7 @@ data:extend({
 			{type="fluid", name="toxic-sludge", amount=SLUDGE_PER_FILTER},
 		},
 		main_product= "",
-		icon = "__PollutionSolutionsFixFork__/graphics/icons/fluid/toxicsludge.png",
+		icon = GRAPHICS.."icons/fluid/toxicsludge.png",
 		icon_size = 64,
 		subgroup = "fluid-recipes",
 		order = "z",

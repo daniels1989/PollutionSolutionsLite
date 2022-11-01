@@ -1,9 +1,11 @@
+require "constants"
+
 data:extend(
 	{
 		{
 			type = "technology",
 			name = "pollution-controls",
-			icon = "__PollutionSolutionsFixFork__/graphics/icons/pollution-collection.png",
+			icon = GRAPHICS.."icons/pollution-collection.png",
 			icon_size = 128,
 			prerequisites = {"fluid-handling"},
 			unit =
@@ -44,7 +46,7 @@ data:extend(
 		{
 			type = "technology",
 			name = "inceneration",
-			icon = "__PollutionSolutionsFixFork__/graphics/icons/inceneration.png",
+			icon = GRAPHICS.."icons/inceneration.png",
 			icon_size = 128,
 			prerequisites = {"pollution-controls", "flammables","military-2"},
 			unit =

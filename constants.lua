@@ -1,3 +1,5 @@
+GRAPHICS = '__PollutionSolutionsFixFork2__/graphics/';
+
 --=========--
 -- Control --
 --=========--
@@ -20,7 +22,7 @@ TOXIC_DUMP_CLOUD_LARGE           = 'toxic-cloud-large'
 TOXIC_DUMP_CLOUD_LARGE_PERCENT   = 0.20                   -- As a percentage of "overflow"
 TOXIC_DUMP_CONSUME_PERCENT       = 0.5                    -- Destroys this percentage of the potential output when dumping toxic sludge, divided by toxic sludge ratio for concentrated pollution
 
-POLLUTION_COLLECTOR_NAME         = 'pollutioncollector' 
+POLLUTION_COLLECTOR_NAME         = 'pollutioncollector'
 
 POLLUTED_AIR_NAME                = "polluted-air"
 EMISSIONS_PER_AIR                = 1                      -- amount of actual air pollution per unit of polluted-air

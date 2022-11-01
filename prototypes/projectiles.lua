@@ -21,8 +21,8 @@ function fireutil.create_fire_pictures(opts)
   local fire_tint = {r=1,g=1,b=1,a=1}
   local fire_flags = { "compressed" }
   local retval = {
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-13.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-13.png",
       line_length = 8,
       width = 60,
       height = 118,
@@ -36,8 +36,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { -0.0390625, -0.90625 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-12.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-12.png",
       line_length = 8,
       width = 63,
       height = 116,
@@ -51,8 +51,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { -0.015625, -0.914065 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-11.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-11.png",
       line_length = 8,
       width = 61,
       height = 122,
@@ -66,8 +66,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { -0.0078125, -0.90625 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-10.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-10.png",
       line_length = 8,
       width = 65,
       height = 108,
@@ -81,8 +81,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { -0.0625, -0.64844 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-09.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-09.png",
       line_length = 8,
       width = 64,
       height = 101,
@@ -96,8 +96,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { -0.03125, -0.695315 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-08.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-08.png",
       line_length = 8,
       width = 50,
       height = 98,
@@ -111,8 +111,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { -0.0546875, -0.77344 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-07.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-07.png",
       line_length = 8,
       width = 54,
       height = 84,
@@ -126,8 +126,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { 0.015625, -0.640625 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-06.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-06.png",
       line_length = 8,
       width = 65,
       height = 92,
@@ -141,8 +141,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { 0, -0.83594 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-05.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-05.png",
       line_length = 8,
       width = 59,
       height = 103,
@@ -156,8 +156,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { 0.03125, -0.882815 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-04.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-04.png",
       line_length = 8,
       width = 67,
       height = 130,
@@ -171,8 +171,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { 0.015625, -1.109375 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-03.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-03.png",
       line_length = 8,
       width = 74,
       height = 117,
@@ -186,8 +186,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { 0.046875, -0.984375 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-02.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-02.png",
       line_length = 8,
       width = 74,
       height = 114,
@@ -201,8 +201,8 @@ function fireutil.create_fire_pictures(opts)
       flags = fire_flags,
       shift = { 0.0078125, -0.96875 }
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/fire-flame-01.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/fire-flame-01.png",
       line_length = 8,
       width = 66,
       height = 119,
@@ -230,7 +230,7 @@ function fireutil.create_small_tree_flame_animations(opts)
   local fire_flags = { "compressed" }
   local retval = {
     {
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/tree-fire-flame-01-a.png",
+      filename = GRAPHICS.."entity/fire-flame/tree-fire-flame-01-a.png",
       line_length = 8,
       width = 38,
       height = 110,
@@ -245,7 +245,7 @@ function fireutil.create_small_tree_flame_animations(opts)
       flags = fire_flags
     },
     {
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/tree-fire-flame-01-b.png",
+      filename = GRAPHICS.."entity/fire-flame/tree-fire-flame-01-b.png",
       line_length = 8,
       width = 39,
       height = 111,
@@ -260,7 +260,7 @@ function fireutil.create_small_tree_flame_animations(opts)
       flags = fire_flags
     },
     {
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/tree-fire-flame-01-c.png",
+      filename = GRAPHICS.."entity/fire-flame/tree-fire-flame-01-c.png",
       line_length = 8,
       width = 44,
       height = 108,
@@ -274,8 +274,8 @@ function fireutil.create_small_tree_flame_animations(opts)
       tint = fire_tint,
       flags = fire_flags
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/tree-fire-flame-03-a.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/tree-fire-flame-03-a.png",
       line_length = 8,
       width = 38,
       height = 110,
@@ -289,8 +289,8 @@ function fireutil.create_small_tree_flame_animations(opts)
       tint = fire_tint,
       flags = fire_flags
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/tree-fire-flame-03-b.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/tree-fire-flame-03-b.png",
       line_length = 8,
       width = 34,
       height = 98,
@@ -304,8 +304,8 @@ function fireutil.create_small_tree_flame_animations(opts)
       tint = fire_tint,
       flags = fire_flags
     },
-    { 
-      filename = "__PollutionSolutionsFixFork__/graphics/entity/fire-flame/tree-fire-flame-03-c.png",
+    {
+      filename = GRAPHICS.."entity/fire-flame/tree-fire-flame-03-c.png",
       line_length = 8,
       width = 39,
       height = 111,
@@ -320,7 +320,7 @@ function fireutil.create_small_tree_flame_animations(opts)
       flags = fire_flags
     }
   }
-  
+
   return fireutil.foreach(retval, function(tab)
     if tab.shift and tab.scale then tab.shift = { tab.shift[1] * tab.scale, tab.shift[2] * tab.scale } end
   end)
@@ -328,8 +328,8 @@ end
 
 local toxicflame = util.table.deepcopy(data.raw['stream']['flamethrower-fire-stream'])
 toxicflame.name = "toxic-flame-stream"
-toxicflame.spine_animation.filename = "__PollutionSolutionsFixFork__/graphics/entity/flamethrower-fire-stream/flamethrower-fire-stream-spine.png"
-toxicflame.particle.filename = "__PollutionSolutionsFixFork__/graphics/entity/flamethrower-fire-stream/flamethrower-explosion.png"
+toxicflame.spine_animation.filename = GRAPHICS.."entity/flamethrower-fire-stream/flamethrower-fire-stream-spine.png"
+toxicflame.particle.filename = GRAPHICS.."entity/flamethrower-fire-stream/flamethrower-explosion.png"
 toxicflame.action[3] = {  type = "area",  radius = 0.2,  probability = 0.004, target_entities = false,  action_delivery =  {    type = "instant",    target_effects =    {      type = "create-entity",      entity_name = "toxic-cloud-small",      show_in_tooltip = true    }  }}
 toxicflame.action[2].action_delivery.target_effects[1].entity_name = "toxic-fire"
 toxicflame.action[1].action_delivery.target_effects[1].sticker = "toxic-sticker"
@@ -393,7 +393,7 @@ toxiccloud_small.affected_by_wind = false
 toxiccloud_small.animation = {
 	layers = {
 		--[[{
-			filename = "__PollutionSolutionsFixFork__/graphics/entity/cloud/toxicwaste_overlay.png",
+			filename = GRAPHICS.."entity/cloud/toxicwaste_overlay.png",
 			flags = { "compressed" },
 			priority = "low",
 			width = 256,
@@ -405,7 +405,7 @@ toxiccloud_small.animation = {
 			draw_as_shadow = false,
 		},--]]
 		{
-			filename = "__PollutionSolutionsFixFork__/graphics/entity/cloud/toxicwaste.png",
+			filename = GRAPHICS.."entity/cloud/toxicwaste.png",
 			flags = { "compressed" },
 			priority = "low",
 			width = 256,
@@ -420,7 +420,7 @@ toxiccloud_small.animation = {
 }
 --toxiccloud_small.animation.scale = 2
 --toxiccloud_small.animation.animation_speed = 0.25
---toxiccloud_small.animation.filename = "__PollutionSolutionsFixFork__/graphics/entity/cloud/toxicwaste.png"
+--toxiccloud_small.animation.filename = GRAPHICS.."entity/cloud/toxicwaste.png"
 
 --toxiccloud_small.render_layer = "decorative"
 toxiccloud_small.cyclic = true

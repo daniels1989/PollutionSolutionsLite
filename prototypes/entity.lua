@@ -18,10 +18,10 @@ local sludgePerMinute = 60 * (INCINERATOR_OUTPUT / INCENERATOR_EFFICIENCY) / MJ_
 
 incinerator.energy_source.emissions_per_minute = emissionsPerSludge * sludgePerMinute
 
-incinerator.picture.layers[1].filename = "__PollutionSolutionsFixFork__/graphics/entity/incinerator/incinerator.png"
-incinerator.picture.layers[1].hr_version.filename = "__PollutionSolutionsFixFork__/graphics/entity/incinerator/hr-incinerator.png"
-incinerator.working_light_picture.filename="__PollutionSolutionsFixFork__/graphics/entity/incinerator/reactor-lights-color.png"
-incinerator.working_light_picture.hr_version.filename="__PollutionSolutionsFixFork__/graphics/entity/incinerator/hr-reactor-lights-color.png"
+incinerator.picture.layers[1].filename = GRAPHICS.."entity/incinerator/incinerator.png"
+incinerator.picture.layers[1].hr_version.filename = GRAPHICS.."entity/incinerator/hr-incinerator.png"
+incinerator.working_light_picture.filename=GRAPHICS.."entity/incinerator/reactor-lights-color.png"
+incinerator.working_light_picture.hr_version.filename=GRAPHICS.."entity/incinerator/hr-reactor-lights-color.png"
 incinerator.light_color={r=0.744, g=0.275, b=0.867}
 incinerator.heat_buffer.max_temperature=615
 
@@ -38,7 +38,7 @@ incinerator.energy_source.smoke =
 	}
 }
 
-local inceneratorsmoke = 
+local inceneratorsmoke =
 {
 	type = "trivial-smoke",
 	name = "incenerator-smoke",
@@ -79,15 +79,15 @@ lowheater.name = "low-heat-exchanger"
 lowheater.order = "z"
 lowheater.minable.result = "low-heat-exchanger"
 lowheater.target_temperature = 315
-lowheater.icon = "__PollutionSolutionsFixFork__/graphics/icons/low-heat-boiler.png"
-lowheater.structure.north.layers[1].filename			=  "__PollutionSolutionsFixFork__/graphics/entity/low-heat-exchanger/lowheatex-N-idle.png"
-lowheater.structure.north.layers[1].hr_version.filename	=  "__PollutionSolutionsFixFork__/graphics/entity/low-heat-exchanger/hr-lowheatex-N-idle.png"
-lowheater.structure.east.layers[1].filename				=  "__PollutionSolutionsFixFork__/graphics/entity/low-heat-exchanger/lowheatex-E-idle.png"
-lowheater.structure.east.layers[1].hr_version.filename	=  "__PollutionSolutionsFixFork__/graphics/entity/low-heat-exchanger/hr-lowheatex-E-idle.png"
-lowheater.structure.south.layers[1].filename			=  "__PollutionSolutionsFixFork__/graphics/entity/low-heat-exchanger/lowheatex-S-idle.png"
-lowheater.structure.south.layers[1].hr_version.filename	=  "__PollutionSolutionsFixFork__/graphics/entity/low-heat-exchanger/hr-lowheatex-S-idle.png"
-lowheater.structure.west.layers[1].filename 			=  "__PollutionSolutionsFixFork__/graphics/entity/low-heat-exchanger/lowheatex-W-idle.png"
-lowheater.structure.west.layers[1].hr_version.filename	=  "__PollutionSolutionsFixFork__/graphics/entity/low-heat-exchanger/hr-lowheatex-W-idle.png"
+lowheater.icon = GRAPHICS.."icons/low-heat-boiler.png"
+lowheater.structure.north.layers[1].filename			=  GRAPHICS.."entity/low-heat-exchanger/lowheatex-N-idle.png"
+lowheater.structure.north.layers[1].hr_version.filename	=  GRAPHICS.."entity/low-heat-exchanger/hr-lowheatex-N-idle.png"
+lowheater.structure.east.layers[1].filename				=  GRAPHICS.."entity/low-heat-exchanger/lowheatex-E-idle.png"
+lowheater.structure.east.layers[1].hr_version.filename	=  GRAPHICS.."entity/low-heat-exchanger/hr-lowheatex-E-idle.png"
+lowheater.structure.south.layers[1].filename			=  GRAPHICS.."entity/low-heat-exchanger/lowheatex-S-idle.png"
+lowheater.structure.south.layers[1].hr_version.filename	=  GRAPHICS.."entity/low-heat-exchanger/hr-lowheatex-S-idle.png"
+lowheater.structure.west.layers[1].filename 			=  GRAPHICS.."entity/low-heat-exchanger/lowheatex-W-idle.png"
+lowheater.structure.west.layers[1].hr_version.filename	=  GRAPHICS.."entity/low-heat-exchanger/hr-lowheatex-W-idle.png"
 lowheater.energy_source.min_working_temperature = 315
 lowheater.energy_source.max_temperature = 615
 lowheater.energy_source.minimum_glow_temperature = 100
@@ -108,14 +108,14 @@ toxicturret.attack_parameters.fluids = {
 }
 if mods["modmashsplinterresources"] then
     table.insert(toxicturret.attack_parameters.fluids,
-	{	
+	{
 	type = "alien-ooze",
 	 damage_modifier=0.66
 	})
 end
 if mods["NauvisDay"] then
     table.insert(toxicturret.attack_parameters.fluids,
-	{	
+	{
 	type = "waste",
 	 damage_modifier=0.33
 	})
@@ -141,7 +141,7 @@ emitter.minable.result = "dump-site"
 emitter.flags = {"placeable-neutral", "player-creation"}
 emitter.corpse = "small-worm-corpse"
 emitter.dying_explosion = "blood-explosion-big"
-emitter.icon = "__PollutionSolutionsFixFork__/graphics/icons/toxicdump_icon.png"
+emitter.icon = GRAPHICS.."icons/toxicdump_icon.png"
 emitter.icon_size=64
 emitter.next_upgrade = nil
 emitter.light = {
@@ -160,7 +160,7 @@ emitter.fluid_box.pipe_connections ={
 emitter.fluid_box.base_area = 50
 emitter.pictures.picture.sheets = {
 	{
-		filename = "__PollutionSolutionsFixFork__/graphics/entity/emitter/toxicdump.png",
+		filename = GRAPHICS.."entity/emitter/toxicdump.png",
 		frames = 1,
 		width = 321,--110,
 		height = 321,--108,
@@ -168,7 +168,7 @@ emitter.pictures.picture.sheets = {
 		shift = util.by_pixel(0, 4),
 		priority = "extra-high",
 		hr_version = {
-			filename = "__PollutionSolutionsFixFork__/graphics/entity/emitter/toxicdump.png",
+			filename = GRAPHICS.."entity/emitter/toxicdump.png",
 			frames = 1,
 			width = 321,--110,
 			height = 321,--108,
@@ -178,7 +178,7 @@ emitter.pictures.picture.sheets = {
 		},
 	},
 	{
-		filename = "__PollutionSolutionsFixFork__/graphics/entity/emitter/toxicdump_shadow.png",
+		filename = GRAPHICS.."entity/emitter/toxicdump_shadow.png",
 		frames = 1,
 		width = 321,--110,
 		height = 256,--108,
@@ -187,7 +187,7 @@ emitter.pictures.picture.sheets = {
 		priority = "extra-high",
 		draw_as_shadow = true,
 		hr_version = {
-			filename = "__PollutionSolutionsFixFork__/graphics/entity/emitter/toxicdump_shadow.png",
+			filename = GRAPHICS.."entity/emitter/toxicdump_shadow.png",
 			frames = 1,
 			width = 321,--110,
 			height = 256,--108,
