@@ -561,36 +561,5 @@ addResistance({data.raw["armor"]["power-armor-mk2"]},	POLLUTION_DAMAGE_TYPE, 40,
 
 
 
------------
--- Other --
------------
 
---data.raw["pipe"].collision_mask = {"item-layer", "object-layer", "water-tile"}
-if settings.startup["zpollution-pipe-collision"].value == false then
-  data.raw["pipe-to-ground"]["pipe-to-ground"].collision_mask = {"item-layer", "object-layer", "water-tile"}
-end
-if settings.startup["zpollution-pipe-vulnerable"].value == false then
-  for damageType, _ in pairs(data.raw["damage-type"]) do
-      data.raw["pipe-to-ground"]["pipe-to-ground"].resistances[damageType] = {
-        type = damageType,
-        percent = 100
-      }
-  end
-end
-data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.pipe_connections[2].max_underground_distance=settings.startup["zpollution-pipe-distance"].value
 
-local function copyData( _Type, _Name, _args )
-	if( type(_args) == 'table' ) then
-		local data = data.raw[_Type][_Name]
-		for i=1, #_args, 1 do
-			data = data[_args[i]]
-		end
-		return util.table.deepcopy(data)
-	else
-		return util.table.deepcopy(data.raw[_Type][_Name][_args])
-	end
-end
-
-if mods["Dectorio"] then
-settings.startup["dectorio-gravel"].value = false
-end

@@ -66,28 +66,6 @@ data:extend{
 		order = "b-b"
   },
   {
-    type = "bool-setting",
-    name = "zpollution-pipe-collision",
-    setting_type = "startup",
-    default_value = false,
-		order = "c-a"
-  },
-  {
-    type = "bool-setting",
-    name = "zpollution-pipe-vulnerable",
-    setting_type = "startup",
-    default_value = false,
-		order = "c-b"
-  },
-  {
-    type = "int-setting",
-    name = "zpollution-pipe-distance",
-    setting_type = "startup",
-    minimum_value = 5,
-    default_value = 20,
-		order = "c-c"
-  },
-  {
     type = "double-setting",
     name = "zpollution-tree-absorption",
     setting_type = "startup",
