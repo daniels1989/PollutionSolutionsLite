@@ -1,10 +1,5 @@
 require "constants"
 
-for _, tree in pairs(data.raw["tree"]) do
-	if tree.max_health == 50 then
-		tree.emissions_per_second = -settings.startup["zpollution-tree-absorption"].value
-	end
-end
 
 data.raw["solar-panel"]["solar-panel"].production = "30kW" -- was 60
 data.raw["accumulator"]["accumulator"].energy_source.buffer_capacity = "2.5MJ" -- was 5

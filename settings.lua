@@ -65,15 +65,6 @@ data:extend{
     default_value = 10.0,
 		order = "b-b"
   },
-  {
-    type = "double-setting",
-    name = "zpollution-tree-absorption",
-    setting_type = "startup",
-    minimum_value = 0,
-    default_value = 0.001,
-		order = "c-d"
-  },
-  
 
   -- Runtime
   {
