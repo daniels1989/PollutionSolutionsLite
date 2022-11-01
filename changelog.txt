@@ -1,0 +1,45 @@
+
+Version: 1.0.15
+Date: 2022.10.25
+  Notes:
+    - Added NauvisDay waste to Toxic Turret
+    - Resolved a personal usage issue in recipe.lua
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+Date: 2022.10.25
+  Notes:
+    - 2nd wave of paltry attempts at buffing Toxic Turret and Toxic Dump damage in projectiles.lua
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.13
+Date: 2022.10.25
+  Notes:
+    - 1st wave of paltry attempts at buffing Toxic Turret damage, Incinerator & Low-Heat Exchanger output, and more ModMash Spliter Alien Ooze compat in projectiles, entity, and recipe.lua
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.12
+Date: 2022.8.22
+  Notes:
+    - Fixed crash when missing OPTIONAL dependency
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.11
+Date: 2022.8.18
+  Notes:
+    - Attempted to re-balance HEV Suit cost.
+    - Attempts to add very basic barebones compat (just tech tree inserts for now) between Rampant Industry, Nauvis Melange, and ModMash Splinter's Alien Ooze. Did basic repairs to the WIP Xeno Nest to test functionality, but left disabled due to being over-powered for my personal purposes (and not knowing how to make a toggle).
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: 2022.8.18
+  Notes:
+    - Stripped even more from the controls.lua due to the behavior still persisting. Completely removed pickup safety radius from settings.lua
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 2022.8.18
+  Notes:
+    - Just straight up raw deleted strings in the lua scripts referencing auto-deconstruction in controls.lua under Loot Functionality, and changed the pickup safety radius default value to 0 in settings.lua, updated mod info and corrected reference names to reflect this mod attempt's purpose.
