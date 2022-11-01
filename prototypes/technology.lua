@@ -40,8 +40,8 @@ data:extend({
   },
   {
     type = "technology",
-    name = "inceneration",
-    icon = GRAPHICS.."icons/inceneration.png",
+    name = "incineration",
+    icon = GRAPHICS.."icons/incineration.png",
     icon_size = 128,
     prerequisites = {"pollution-controls", "flammables","military-2"},
     unit =

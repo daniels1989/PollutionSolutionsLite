@@ -10,15 +10,15 @@ end
 
 if mods["NauvisDay"] then
   table.insert(data.raw["technology"]["pollution-capture"].prerequisites, "pollution-controls")
-  table.insert(data.raw["technology"]["pollution-processing"].prerequisites, "inceneration")
+  table.insert(data.raw["technology"]["pollution-processing"].prerequisites, "incineration")
 end
 
 if mods["nauvis-melange"] then
-  table.insert(data.raw["technology"]["nm-alien-breeding"].prerequisites, "inceneration")
+  table.insert(data.raw["technology"]["nm-alien-breeding"].prerequisites, "incineration")
 end
 
 if mods["modmashsplinterresources"] then
-  table.insert(data.raw["technology"]["alien-conversion1"].prerequisites, "inceneration")
+  table.insert(data.raw["technology"]["alien-conversion1"].prerequisites, "incineration")
 end
 
 
