@@ -23,25 +23,25 @@ end
 
 
 local function addResistance(entityList, _DamageType, _Percent, _Decrease)
-	if not entityList or (not _Percent and not _Decrease) or (_Percent == 0 and _Decrease == 0)  then
-		log("Failed to make entity list immune.")
-	end
-	for name,entity in pairs(entityList) do
-		local resistTable = {
-			type = _DamageType,
-		}
-		if _Percent and _Percent ~= 0 then
-			resistTable.percent = _Percent
-		end
-		if _Decrease and _Decrease ~= 0 then
-			resistTable.decrease = _Decrease
-		end
-		if not entity.resistances then
-			entityList[name].resistances = {resistTable}
-		else
-			table.insert(entityList[name].resistances, resistTable)
-		end
-	end
+  if not entityList or (not _Percent and not _Decrease) or (_Percent == 0 and _Decrease == 0)  then
+    log("Failed to make entity list immune.")
+  end
+  for name,entity in pairs(entityList) do
+    local resistTable = {
+      type = _DamageType,
+    }
+    if _Percent and _Percent ~= 0 then
+      resistTable.percent = _Percent
+    end
+    if _Decrease and _Decrease ~= 0 then
+      resistTable.decrease = _Decrease
+    end
+    if not entity.resistances then
+      entityList[name].resistances = {resistTable}
+    else
+      table.insert(entityList[name].resistances, resistTable)
+    end
+  end
 end
 
 -----------------

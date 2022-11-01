@@ -15,29 +15,29 @@ hev_item.order = "a[hev-armor]"
 hev_item.durability = 500
 hev_item.resistances = {
 	{
-        type = "fire",
-        decrease = 20,
-        percent = 90
+    type = "fire",
+    decrease = 20,
+    percent = 90
 	},
 	{
-        type = POLLUTION_DAMAGE_TYPE,
-        decrease = 20,
-        percent = 90
+    type = POLLUTION_DAMAGE_TYPE,
+    decrease = 20,
+    percent = 90
 	},
 	{
-        type = "poison",
-        decrease = 20,
-        percent = 90
+    type = "poison",
+    decrease = 20,
+    percent = 90
 	},
 	{
-        type = "acid",
-        decrease = 20,
-        percent = 90
+    type = "acid",
+    decrease = 20,
+    percent = 90
 	},
 	{
-        type = "electric",
-        decrease = 20,
-        percent = 90
+    type = "electric",
+    decrease = 20,
+    percent = 90
 	},
 }
 

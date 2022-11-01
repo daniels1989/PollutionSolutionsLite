@@ -18,6 +18,6 @@ pollution.icon_size = 64
 pollution.order = "a[fluid]-b[pollution]"
 
 data:extend({
-	toxicsludge,
-	pollution,
+  toxicsludge,
+  pollution,
 })

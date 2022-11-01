@@ -1,10 +1,10 @@
 require "constants"
 
 data:extend({
-	{
-		type = "damage-type",
-		name = "toxic",
-	},
+  {
+    type = "damage-type",
+    name = "toxic",
+  },
 })
 
 local fireutil = {}
@@ -391,32 +391,32 @@ local toxiccloud_small = util.table.deepcopy(data.raw['smoke-with-trigger']['poi
 toxiccloud_small.name = "toxic-cloud-small"
 toxiccloud_small.affected_by_wind = false
 toxiccloud_small.animation = {
-	layers = {
-		--[[{
-			filename = GRAPHICS.."entity/cloud/toxicwaste_overlay.png",
-			flags = { "compressed" },
-			priority = "low",
-			width = 256,
-			height = 256,
-			frame_count = 45,
-			animation_speed = 0.25,
-			line_length = 7,
-			scale = 2,
-			draw_as_shadow = false,
-		},--]]
-		{
-			filename = GRAPHICS.."entity/cloud/toxicwaste.png",
-			flags = { "compressed" },
-			priority = "low",
-			width = 256,
-			height = 256,
-			frame_count = 45,
-			animation_speed = 0.25,
-			line_length = 7,
-			scale = 2,
-			draw_as_shadow = true,
-		}
-	}
+  layers = {
+    --[[{
+      filename = GRAPHICS.."entity/cloud/toxicwaste_overlay.png",
+      flags = { "compressed" },
+      priority = "low",
+      width = 256,
+      height = 256,
+      frame_count = 45,
+      animation_speed = 0.25,
+      line_length = 7,
+      scale = 2,
+      draw_as_shadow = false,
+    },--]]
+    {
+      filename = GRAPHICS.."entity/cloud/toxicwaste.png",
+      flags = { "compressed" },
+      priority = "low",
+      width = 256,
+      height = 256,
+      frame_count = 45,
+      animation_speed = 0.25,
+      line_length = 7,
+      scale = 2,
+      draw_as_shadow = true,
+    }
+  }
 }
 --toxiccloud_small.animation.scale = 2
 --toxiccloud_small.animation.animation_speed = 0.25
@@ -431,14 +431,14 @@ toxiccloud_small.spread_duration = 0
 toxiccloud_small.action.action_delivery.target_effects.action.radius = 6
 toxiccloud_small.color = {r=1.0, g=0.0, b=1.0}
 toxiccloud_small.action.action_delivery.target_effects.action.action_delivery.target_effects = {
-	{
-		type = "damage",
-		damage = { amount = 8, type = POLLUTION_DAMAGE_TYPE}
-	},
-	{
-		type = "create-sticker",
-		sticker = "toxic-slowdown-sticker"
-	}
+  {
+    type = "damage",
+    damage = { amount = 8, type = POLLUTION_DAMAGE_TYPE}
+  },
+  {
+    type = "create-sticker",
+    sticker = "toxic-slowdown-sticker"
+  }
 }
 
 local toxiccloud_medium = util.table.deepcopy(toxiccloud_small)
@@ -458,12 +458,12 @@ toxiccloud_large.action.action_delivery.target_effects.action.radius = 12
 
 
 data:extend({
-	toxicflame,
-	toxicsticker,
-	firetoxic,
-	firetoxicontree,
-	toxicslowdownsticker,
-	toxiccloud_small,
-	toxiccloud_medium,
-	toxiccloud_large,
+  toxicflame,
+  toxicsticker,
+  firetoxic,
+  firetoxicontree,
+  toxicslowdownsticker,
+  toxiccloud_small,
+  toxiccloud_medium,
+  toxiccloud_large,
 })

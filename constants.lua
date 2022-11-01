@@ -3,7 +3,7 @@ GRAPHICS = '__PollutionSolutionsFixFork2__/graphics/';
 --=========--
 -- Control --
 --=========--
-TICKS_PER_SECOND                = 60
+TICKS_PER_SECOND                 = 60
 
 TOXIC_DUMP_NAME                  = 'dump-site'
 TOXIC_DUMP_INTERVAL              = 30 * TICKS_PER_SECOND  -- dump pollution every # seconds
@@ -47,7 +47,7 @@ SLUDGE_PER_FILTER                = settings.startup["zpollution-sludge-per-filte
 --=========--
 FILTER_PER_LIQUIFY               = 1
 WATER_PER_FILTER_PERCENT         = 1
-BLUE_XENOMASS_PER_RED_XENOMASS           = settings.startup["zpollution-blue-per-red"].value
+BLUE_XENOMASS_PER_RED_XENOMASS   = settings.startup["zpollution-blue-per-red"].value
 BLUE_TO_RED_COST                 = settings.startup["zpollution-blue-to-red-cost"].value
-POLLUTION_PER_BLUE_XENOMASS          = 500 -- for domesticated nests
-SLUDGE_PER_RED_XENOMASS              = 1000 -- for domesticated nests
+POLLUTION_PER_BLUE_XENOMASS      = 500 -- for domesticated nests
+SLUDGE_PER_RED_XENOMASS          = 1000 -- for domesticated nests
