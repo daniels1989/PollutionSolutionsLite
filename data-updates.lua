@@ -1,11 +1,5 @@
 require "constants"
 
-
-data.raw["solar-panel"]["solar-panel"].production = "30kW" -- was 60
-data.raw["accumulator"]["accumulator"].energy_source.buffer_capacity = "2.5MJ" -- was 5
-data.raw["accumulator"]["accumulator"].energy_source.input_flow_limit = "300kW"
-data.raw["accumulator"]["accumulator"].energy_source.output_flow_limit = "300kW"
-
 ------------------
 -- Technologies --
 ------------------
