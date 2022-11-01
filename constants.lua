@@ -33,10 +33,10 @@ MJ_PER_TOXIC_SLUDGE              = settings.startup["zpollution-mj-per-sludge"].
 POLLUTION_DAMAGE_TYPE            = "toxic"
 
 -- when burned, how much of the toxic sludge is completely burned - the rest ends up as pollution
-INCENERATOR_EFFICIENCY           = settings.startup["zpollution-incenerator-efficiency"].value
+INCINERATOR_EFFICIENCY           = settings.startup["zpollution-incinerator-efficiency"].value
 
--- speed of the incenerator, in MW
-INCINERATOR_OUTPUT          		 = settings.startup["zpollution-incenerator-output"].value
+-- speed of the incinerator, in MW
+INCINERATOR_OUTPUT          		 = settings.startup["zpollution-incinerator-output"].value
 
 -- amount of polluted-air per unit of toxic sludge
 AIR_PER_SLUDGE                   = settings.startup["zpollution-air-per-sludge"].value

@@ -1,7 +1,7 @@
 require "constants"
 
 --
--- Incenerator
+-- incinerator
 --
 
 local incinerator = util.table.deepcopy(data.raw['reactor']['nuclear-reactor'])
@@ -10,11 +10,11 @@ incinerator.order = "z"
 incinerator.minable.result = "toxic-incinerator"
 incinerator.consumption = INCINERATOR_OUTPUT .. "MW" -- the game divides this by efficiency to get true consumption
 incinerator.energy_source.fuel_category = "waste"
-incinerator.energy_source.effectivity = INCENERATOR_EFFICIENCY
+incinerator.energy_source.effectivity = INCINERATOR_EFFICIENCY
 incinerator.meltdown_action = nil
 
-local emissionsPerSludge = EMISSIONS_PER_AIR * AIR_PER_SLUDGE * (1-INCENERATOR_EFFICIENCY)
-local sludgePerMinute = 60 * (INCINERATOR_OUTPUT / INCENERATOR_EFFICIENCY) / MJ_PER_TOXIC_SLUDGE
+local emissionsPerSludge = EMISSIONS_PER_AIR * AIR_PER_SLUDGE * (1-INCINERATOR_EFFICIENCY)
+local sludgePerMinute = 60 * (INCINERATOR_OUTPUT / INCINERATOR_EFFICIENCY) / MJ_PER_TOXIC_SLUDGE
 
 incinerator.energy_source.emissions_per_minute = emissionsPerSludge * sludgePerMinute
 
@@ -28,7 +28,7 @@ incinerator.heat_buffer.max_temperature=615
 incinerator.energy_source.smoke =
 {
 	{
-		name = "incenerator-smoke",
+		name = "incinerator-smoke",
 		north_position = {-0.1, -2},
 		east_position = {-0.1, -2},
 		frequency = 20,
@@ -38,10 +38,10 @@ incinerator.energy_source.smoke =
 	}
 }
 
-local inceneratorsmoke =
+local incineratorsmoke =
 {
 	type = "trivial-smoke",
-	name = "incenerator-smoke",
+	name = "incinerator-smoke",
 	flags = {"not-on-map"},
 	duration = 10*TICKS_PER_SECOND,
 	fade_in_duration = 0,
@@ -106,20 +106,23 @@ toxicturret.minable.result = "toxic-turret"
 toxicturret.attack_parameters.fluids = {
   {type = "toxic-sludge"},
 }
+
 if mods["modmashsplinterresources"] then
-    table.insert(toxicturret.attack_parameters.fluids,
+  table.insert(toxicturret.attack_parameters.fluids,
 	{
-	type = "alien-ooze",
-	 damage_modifier=0.66
+	  type = "alien-ooze",
+	  damage_modifier=0.66
 	})
 end
+
 if mods["NauvisDay"] then
-    table.insert(toxicturret.attack_parameters.fluids,
+  table.insert(toxicturret.attack_parameters.fluids,
 	{
-	type = "waste",
-	 damage_modifier=0.33
+	  type = "waste",
+	  damage_modifier=0.33
 	})
 end
+
 toxicturret.attack_parameters.fluid_consumption = 3.0
 toxicturret.attack_parameters.ammo_type.action.action_delivery.stream = "toxic-flame-stream"
 table.insert(toxicturret.resistances,
@@ -227,7 +230,7 @@ dumpsmoke.render_layer = "higher-object-under"
 data:extend({
 	--airfilterSmoke,
 	--airfilter,
-	inceneratorsmoke,
+	incineratorsmoke,
 	incinerator,
 	toxicturret,
 	lowheater,

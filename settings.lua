@@ -34,7 +34,7 @@ data:extend{
   },
   {
     type = "double-setting",
-    name = "zpollution-incenerator-efficiency",
+    name = "zpollution-incinerator-efficiency",
     setting_type = "startup",
     minimum_value = 0.01,
     default_value = 0.1,
@@ -43,7 +43,7 @@ data:extend{
   },
   {
     type = "double-setting",
-    name = "zpollution-incenerator-output",
+    name = "zpollution-incinerator-output",
     setting_type = "startup",
     minimum_value = 0.001,
     default_value = 2.0,
