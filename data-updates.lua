@@ -103,46 +103,6 @@ data:extend(
 })
 
 
---[[
-  data:extend(
-{
-	{
-		type = "technology",
-		name = "industrial-xenomass",
-		icon = "__base__/graphics/icons/biter-spawner.png",
-		icon_size = 64,
-		prerequisites = {"inceneration", "chemical-science-pack"},
-		unit =
-		{
-			count = 500,
-			ingredients =
-			{
-				{"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}
-			},
-			time = 30
-		},
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "domesticated-nest"
-      },
-			{
-				type = "unlock-recipe",
-				recipe = "nest-pollution-blue-xenomass"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "nest-sludge-red-xenomass"
-			},
-		},
-		order = "c-a"
-	},
-})
-]]--
-
 -------------------
 -- Compatibility --
 -------------------
@@ -155,24 +115,14 @@ if mods["NauvisDay"] then
   table.insert(data.raw["technology"]["pollution-capture"].prerequisites, "pollution-controls")
   table.insert(data.raw["technology"]["pollution-processing"].prerequisites, "inceneration")
 end
-  
+
 if mods["nauvis-melange"] then
   table.insert(data.raw["technology"]["nm-alien-breeding"].prerequisites, "inceneration")
 end
 
 if mods["modmashsplinterresources"] then
-    table.insert(data.raw["technology"]["alien-conversion1"].prerequisites, "inceneration")
+  table.insert(data.raw["technology"]["alien-conversion1"].prerequisites, "inceneration")
 end
-
---[[
-if mods["nauvis-melange"] then
-  table.insert(data.raw["technology"]["industrial-xenomass"].prerequisites, "nm-alien-breeding")
-end
-
-if mods["modmashsplinterresources"] then
-    table.insert(data.raw["technology"]["industrial-xenomass"].prerequisites, "alien-conversion1")
-end
-]]--
 
 -------------------
 -- Toxic Barrels --
@@ -405,41 +355,6 @@ local function get_or_create_barrel_recipes(item, fluid)
   return fill_recipe, empty_recipe
 end
 
---[[ Adds the provided barrel recipe and fill/empty recipes to the technology as recipe unlocks if they don't already exist
-local function add_barrel_to_technology(item, fill_recipe, empty_recipe, technology)
-  local unlock_key = "unlock-recipe"
-  local effects = technology.effects
-
-  if not effects then
-    technology.effects = {}
-    effects = technology.effects
-  end
-
-  local add_item = true
-  local add_fill_recipe = true
-  local add_empty_recipe = true
-
-  for k,v in pairs(effects) do
-    if k == unlock_key then
-      local recipe = v.recipe
-      if recipe == item.name then
-        add_item = false
-      elseif recipe == fill_recipe.name then
-        add_fill_recipe = false
-      elseif recipe == empty_recipe.name then
-        add_empty_recipe = false
-      end
-    end
-  end
-
-  if add_fill_recipe then
-    table.insert(effects, {type = unlock_key, recipe = fill_recipe.name})
-  end
-  if add_empty_recipe then
-    table.insert(effects, {type = unlock_key, recipe = empty_recipe.name})
-  end
-end
---]]
 
 local function process_fluid(fluid, technology, empty_barrel_item)
   local barrel_name = fluid.name .. "-barrel"
@@ -477,13 +392,6 @@ local function addResistance(entityList, _DamageType, _Percent, _Decrease)
 		end
 	end
 end
-
-
-
-
-
-
-
 
 -----------------
 -- Resistances --
@@ -542,13 +450,3 @@ addResistance(data.raw["logistic-container"],	"explosion", 100)
 addResistance({data.raw["armor"]["modular-armor"]},		POLLUTION_DAMAGE_TYPE, 10, 5)
 addResistance({data.raw["armor"]["power-armor"]},		POLLUTION_DAMAGE_TYPE, 30, 10)
 addResistance({data.raw["armor"]["power-armor-mk2"]},	POLLUTION_DAMAGE_TYPE, 40, 15)
-
-
-
-
-
-
-
-
-
-

@@ -18,22 +18,6 @@ toxicturret_item.icons={
 		shift = {4, -8}
     }
 }
---[[
-local airfilter_item = util.table.deepcopy(data.raw['item']['chemical-plant'])
-airfilter_item.name = "airfilter"
-airfilter_item.place_result = "airfilter"
-airfilter_item.stack_size = 50
-airfilter_item.icons={
-	{
-		icon = data.raw['item']['steam-turbine'].icon
-	},
-    {
-		icon = data.raw['fluid']['toxic-sludge'].icon,
-		scale = 0.25,
-		shift = {4, -8}
-    }
-}
---]]
 
 local lowheater_item = util.table.deepcopy(data.raw['item']['heat-exchanger'])
 lowheater_item.name = "low-heat-exchanger"
@@ -54,7 +38,7 @@ data:extend({
 	toxicturret_item,
 	lowheater_item,
 	emitter_item,
-	
+
 	{
 		type = "item",
 		name = "blue-xenomass",
