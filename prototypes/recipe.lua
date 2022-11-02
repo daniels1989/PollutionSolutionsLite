@@ -149,19 +149,10 @@ local newProducts = {
   "blue-xenomass",
 }
 
-for k,v in pairs(newProducts) do
-  table.insert(data.raw["module"]["productivity-module"].limitation,v)
-  table.insert(data.raw["module"]["productivity-module-2"].limitation,v)
-  table.insert(data.raw["module"]["productivity-module-3"].limitation,v)
+for _, product in pairs(newProducts) do
+  for _, _module in pairs(data.raw["module"]) do
+    if _module.category == "productivity" then
+      table.insert(_module.limitation, product)
+    end
+  end
 end
---[[ -- This doesn't work?
-table.insert(data.raw["module"]["productivity-module"].limitation,"collect-pollution")
-table.insert(data.raw["module"]["productivity-module-2"].limitation,"collect-pollution")
-table.insert(data.raw["module"]["productivity-module-3"].limitation,"collect-pollution")
-data.raw["module"]["effectivity-module"].limitation={"collect-pollution"}
-data.raw["module"]["effectivity-module-2"].limitation={"collect-pollution"}
-data.raw["module"]["effectivity-module-3"].limitation={"collect-pollution"}
-data.raw["module"]["effectivity-module"].limitation_message_key = "efficiency-module-only-on-polluters"
-data.raw["module"]["effectivity-module-2"].limitation_message_key = "efficiency-module-only-on-polluters"
-data.raw["module"]["effectivity-module-3"].limitation_message_key = "efficiency-module-only-on-polluters"
---]]
