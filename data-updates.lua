@@ -48,6 +48,19 @@ end
 -- Resistances --
 -----------------
 
-addResistance({data.raw["armor"]["modular-armor"]},		POLLUTION_DAMAGE_TYPE, 10, 5)
-addResistance({data.raw["armor"]["power-armor"]},		POLLUTION_DAMAGE_TYPE, 30, 10)
-addResistance({data.raw["armor"]["power-armor-mk2"]},	POLLUTION_DAMAGE_TYPE, 40, 15)
+for _, armor in pairs(data.raw["armor"]) do
+  log(armor.name)
+  if armor.name ~= "hev-armor" then
+    local value = 0
+    log(value)
+    for _, resistance in pairs(armor.resistances) do
+      log(resistance.type)
+      if resistance.type == "acid" then
+        value = resistance.percent
+        log(value)
+        break
+      end
+    end
+    addResistance({armor}, POLLUTION_DAMAGE_TYPE, math.floor((value / 1.4) / 5) * 5, math.min(20, math.max(5, math.floor(value / 4))))
+  end
+end
