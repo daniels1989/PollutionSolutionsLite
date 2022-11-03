@@ -49,15 +49,11 @@ end
 -----------------
 
 for _, armor in pairs(data.raw["armor"]) do
-  log(armor.name)
   if armor.name ~= "hev-armor" then
     local value = 0
-    log(value)
     for _, resistance in pairs(armor.resistances) do
-      log(resistance.type)
       if resistance.type == "acid" then
         value = resistance.percent
-        log(value)
         break
       end
     end
