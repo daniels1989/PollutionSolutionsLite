@@ -330,16 +330,28 @@ local toxicflame = util.table.deepcopy(data.raw['stream']['flamethrower-fire-str
 toxicflame.name = "toxic-flame-stream"
 toxicflame.spine_animation.filename = GRAPHICS.."entity/flamethrower-fire-stream/flamethrower-fire-stream-spine.png"
 toxicflame.particle.filename = GRAPHICS.."entity/flamethrower-fire-stream/flamethrower-explosion.png"
-toxicflame.action[3] = {  type = "area",  radius = 0.2,  probability = 0.004, target_entities = false,  action_delivery =  {    type = "instant",    target_effects =    {      type = "create-entity",      entity_name = "toxic-cloud-small",      show_in_tooltip = true    }  }}
-toxicflame.action[2].action_delivery.target_effects[1].entity_name = "toxic-fire"
+toxicflame.particle_horizontal_speed = data.raw['stream']['flamethrower-fire-stream'].particle_horizontal_speed * 1.75
+
 toxicflame.action[1].action_delivery.target_effects[1].sticker = "toxic-sticker"
 toxicflame.action[1].action_delivery.target_effects[2].damage.type = POLLUTION_DAMAGE_TYPE
 toxicflame.action[1].action_delivery.target_effects[2].damage.amount = 4.5
 toxicflame.action[1].radius = 5
+toxicflame.action[2].action_delivery.target_effects[1].entity_name = "toxic-fire"
+toxicflame.action[3] = {
+  type = "area",
+  radius = 0.2,
+  probability = 0.004,
+  target_entities = false,
+  action_delivery =  {
+    type = "instant",
+    target_effects = {
+      type = "create-entity",
+      entity_name = "toxic-cloud-small",
+      show_in_tooltip = true
+    }
+  }
+}
 
-
-
-toxicflame.particle_horizontal_speed = data.raw['stream']['flamethrower-fire-stream'].particle_horizontal_speed * 1.75
 
 local firetoxic = util.table.deepcopy(data.raw['fire']['fire-flame'])
 firetoxic.name = "toxic-fire"
