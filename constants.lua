@@ -1,4 +1,4 @@
-GRAPHICS = '__PollutionSolutionsFixFork2__/graphics/';
+GRAPHICS = '__PollutionSolutionsLite__/graphics/';
 
 --=========--
 -- Control --
@@ -36,7 +36,7 @@ POLLUTION_DAMAGE_TYPE            = "toxic"
 INCINERATOR_EFFICIENCY           = settings.startup["zpollution-incinerator-efficiency"].value
 
 -- speed of the incinerator, in MW
-INCINERATOR_OUTPUT          		 = settings.startup["zpollution-incinerator-output"].value
+INCINERATOR_OUTPUT          	   = settings.startup["zpollution-incinerator-output"].value
 
 -- amount of polluted-air per unit of toxic sludge
 AIR_PER_SLUDGE                   = settings.startup["zpollution-air-per-sludge"].value
