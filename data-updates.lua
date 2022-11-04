@@ -175,6 +175,16 @@ if mods["modmashsplinterresources"] then
     table.insert(data.raw["technology"]["alien-conversion1"].prerequisites, "inceneration")
 end
 
+if mods["NPBees2"] then
+  if mods["angelsbioprocessing"] then
+    table.insert(data.raw["technology"]["beekeeping-1"].prerequisites, "bio-wood-processing-3")
+    table.insert(data.raw["technology"]["beekeeping-1"].unit.ingredients, {type = "item", name = "logistic-science-pack", amount = 1})
+    table.insert(data.raw["technology"]["beekeeping-1"].unit.ingredients, {type = "item", name = "token-bio", amount = 1})
+    table.insert(data.raw["technology"]["beekeeping-2"].prerequisites, "slag-processing-2")
+    table.insert(data.raw["technology"]["beekeeping-2"].unit.ingredients, {type = "item", name = "token-bio", amount = 1})
+  end
+end
+
 --[[
 if mods["nauvis-melange"] then
   table.insert(data.raw["technology"]["industrial-xenomass"].prerequisites, "nm-alien-breeding")

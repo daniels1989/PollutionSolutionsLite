@@ -1,6 +1,12 @@
 
+Version: 1.0.16
+Date: 2022.11.01
+  Notes:
+    - Fixed icon override issue introduced in previous update /w Angels
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.15
-Date: 2022.10.25
+Date: 2022.10.31
   Notes:
     - Added NauvisDay waste to Toxic Turret
     - Resolved a personal usage issue in recipe.lua
