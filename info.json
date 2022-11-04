@@ -1,6 +1,6 @@
 {
-	"name": "PollutionSolutionsFixFork",
-	"author": "Tynatyna, Zerahan, Thalassicus",
+	"name": "PollutionSolutionsFixFork2",
+	"author": "daniels1989, Tynatyna, Zerahan, Thalassicus",
 	"version": "1.0.15",
 	"factorio_version":"1.1",
 	"title": "Pollution Solutions Fix - Personal Fork",
@@ -14,4 +14,4 @@
 		"? Atlas_NormalOresForAngels >= 1.1.3",
 		"? Dectorio >= 0.12.6",
 		"! PollutionSolutionsFix"]
-} 
+}

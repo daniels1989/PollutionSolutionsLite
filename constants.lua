@@ -1,7 +1,9 @@
+GRAPHICS = '__PollutionSolutionsFixFork2__/graphics/';
+
 --=========--
 -- Control --
 --=========--
-TICKS_PER_SECOND                = 60
+TICKS_PER_SECOND                 = 60
 
 TOXIC_DUMP_NAME                  = 'dump-site'
 TOXIC_DUMP_INTERVAL              = 30 * TICKS_PER_SECOND  -- dump pollution every # seconds
@@ -20,7 +22,7 @@ TOXIC_DUMP_CLOUD_LARGE           = 'toxic-cloud-large'
 TOXIC_DUMP_CLOUD_LARGE_PERCENT   = 0.20                   -- As a percentage of "overflow"
 TOXIC_DUMP_CONSUME_PERCENT       = 0.5                    -- Destroys this percentage of the potential output when dumping toxic sludge, divided by toxic sludge ratio for concentrated pollution
 
-POLLUTION_COLLECTOR_NAME         = 'pollutioncollector' 
+POLLUTION_COLLECTOR_NAME         = 'pollutioncollector'
 
 POLLUTED_AIR_NAME                = "polluted-air"
 EMISSIONS_PER_AIR                = 1                      -- amount of actual air pollution per unit of polluted-air
@@ -31,10 +33,10 @@ MJ_PER_TOXIC_SLUDGE              = settings.startup["zpollution-mj-per-sludge"].
 POLLUTION_DAMAGE_TYPE            = "toxic"
 
 -- when burned, how much of the toxic sludge is completely burned - the rest ends up as pollution
-INCENERATOR_EFFICIENCY           = settings.startup["zpollution-incenerator-efficiency"].value
+INCINERATOR_EFFICIENCY           = settings.startup["zpollution-incinerator-efficiency"].value
 
--- speed of the incenerator, in MW
-INCINERATOR_OUTPUT          		 = settings.startup["zpollution-incenerator-output"].value
+-- speed of the incinerator, in MW
+INCINERATOR_OUTPUT          		 = settings.startup["zpollution-incinerator-output"].value
 
 -- amount of polluted-air per unit of toxic sludge
 AIR_PER_SLUDGE                   = settings.startup["zpollution-air-per-sludge"].value
@@ -45,7 +47,7 @@ SLUDGE_PER_FILTER                = settings.startup["zpollution-sludge-per-filte
 --=========--
 FILTER_PER_LIQUIFY               = 1
 WATER_PER_FILTER_PERCENT         = 1
-BLUE_XENOMASS_PER_RED_XENOMASS           = settings.startup["zpollution-blue-per-red"].value
+BLUE_XENOMASS_PER_RED_XENOMASS   = settings.startup["zpollution-blue-per-red"].value
 BLUE_TO_RED_COST                 = settings.startup["zpollution-blue-to-red-cost"].value
-POLLUTION_PER_BLUE_XENOMASS          = 500 -- for domesticated nests
-SLUDGE_PER_RED_XENOMASS              = 1000 -- for domesticated nests
+POLLUTION_PER_BLUE_XENOMASS      = 500 -- for domesticated nests
+SLUDGE_PER_RED_XENOMASS          = 1000 -- for domesticated nests
