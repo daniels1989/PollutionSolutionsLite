@@ -1,11 +1,18 @@
-
-Version: 1.0.15
-Date: 2022.10.25
+Version: 1.0.16
+Date: 2022.12.02
   Notes:
-    - Added NauvisDay waste to Toxic Turret
-    - Resolved a personal usage issue in recipe.lua
+    - Fixed misaligned reactor images
+    - Added fuel values back to toxic waste barrel
+    - Ported fluid changes from Tynatyna's PollutionSolutionsFork
 
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.15
+Date: 2022.11.04
+  Notes:
+    - Forked from Tynatyna's PollutionSolutionsFork
+    - Removed a lot of undocumented, unrelated crap from the original mod
+
+===================================================================================================
 Version: 1.0.14
 Date: 2022.10.25
   Notes:
@@ -23,7 +30,6 @@ Date: 2022.8.22
   Notes:
     - Fixed crash when missing OPTIONAL dependency
 
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.11
 Date: 2022.8.18
@@ -36,7 +42,6 @@ Version: 1.0.10
 Date: 2022.8.18
   Notes:
     - Stripped even more from the controls.lua due to the behavior still persisting. Completely removed pickup safety radius from settings.lua
-
 
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.9

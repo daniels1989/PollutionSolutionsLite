@@ -28,7 +28,6 @@ POLLUTED_AIR_NAME                = "polluted-air"
 EMISSIONS_PER_AIR                = 1                      -- amount of actual air pollution per unit of polluted-air
 TOXIC_SLUDGE_NAME                = "toxic-sludge"
 
-SLUDGE_PER_BARREL                = settings.startup["zpollution-sludge-per-barrel"].value
 MJ_PER_TOXIC_SLUDGE              = settings.startup["zpollution-mj-per-sludge"].value
 POLLUTION_DAMAGE_TYPE            = "toxic"
 
