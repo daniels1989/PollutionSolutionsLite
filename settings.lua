@@ -17,14 +17,6 @@ data:extend{
     order = "a-b"
   },
   {
-    type = "int-setting",
-    name = "zpollution-sludge-per-barrel",
-    setting_type = "startup",
-    minimum_value = 1,
-    default_value = 50,
-    order = "a-c"
-  },
-  {
     type = "double-setting",
     name = "zpollution-mj-per-sludge",
     setting_type = "startup",
