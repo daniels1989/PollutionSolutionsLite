@@ -17,11 +17,11 @@ PollutionSolutions = {}
 
 script.on_init(function()
   local _, err = pcall(PollutionSolutions.InitGlobals)
-  if err then PrintToAll({"pollutionsolutions-err-generic", err}) end
+  if err then game.print(err) end
 end)
 script.on_configuration_changed(function()
   local _, err = pcall(PollutionSolutions.InitGlobals)
-  if err then PrintToAll({"pollutionsolutions-err-generic", err}) end
+  if err then game.print(err) end
 end)
 
 function PollutionSolutions.InitGlobals()
