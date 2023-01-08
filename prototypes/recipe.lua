@@ -151,7 +151,7 @@ local newProducts = {
 
 for _, product in pairs(newProducts) do
   for _, _module in pairs(data.raw["module"]) do
-    if _module.category == "productivity" then
+    if _module.category == "productivity" and _module.limitation ~= nil then
       table.insert(_module.limitation, product)
     end
   end
