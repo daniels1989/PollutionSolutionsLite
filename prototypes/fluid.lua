@@ -8,9 +8,7 @@ local toxicsludge = {
   icon = GRAPHICS.."icons/fluid/toxicsludge.png",
   icon_size = 64,
   order = "a[fluid]-b[toxicsludge]",
-  default_temperature = 75,
-  flow_to_energy_ratio = 0.3,
-  pressure_to_speed_ratio = 0.4
+  default_temperature = 15,
 }
 
 local pollution = {
@@ -22,9 +20,8 @@ local pollution = {
   icon = GRAPHICS.."icons/fluid/pollution.png",
   icon_size = 64,
   order = "a[fluid]-b[pollution]",
-  default_temperature = 75,
-  flow_to_energy_ratio = 0.5,
-  pressure_to_speed_ratio = 0.6
+  default_temperature = 15,
+  gas_temperature = 15,
 }
 
 data:extend({
