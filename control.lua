@@ -17,11 +17,11 @@ PollutionSolutions = {}
 
 script.on_init(function()
   local _, err = pcall(PollutionSolutions.InitGlobals)
-  if err then PrintToAll({"pollutionsolutions-err-generic", err}) end
+  if err then game.print(err) end
 end)
 script.on_configuration_changed(function()
   local _, err = pcall(PollutionSolutions.InitGlobals)
-  if err then PrintToAll({"pollutionsolutions-err-generic", err}) end
+  if err then game.print(err) end
 end)
 
 function PollutionSolutions.InitGlobals()
@@ -108,7 +108,7 @@ end
 function EntityDied(event)
   local alien = event.entity
   --log(alien.name .. " died in force " .. alien.force.name)
-  if alien.force ~= game.forces.enemy or not event.force then return end
+  if not IsAlienForce(alien) then return end
   if global.nestsKilled == nil then global.nestsKilled = 0 end
   if global.spilledLoot == nil then global.spilledLoot = {} end
   if global.lootToCheck == nil then global.lootToCheck = {} end
@@ -151,17 +151,29 @@ function EntityDied(event)
       return
     else
       alien.surface.spill_item_stack(alien.position, loot, true)
-      -- remember my loot
-      local nearItems = alien.surface.find_entities_filtered{
-          position=alien.position,
-          radius=5,
-          name="item-on-ground"
-      }
-      end
     end
   end
+end
 
+function IsAlienForce(entity)
+  if entity.force == nil then
+    return false
+  end
 
+  local force_name = entity.force.name
+
+  -- Vanilla biters
+  if force_name == "enemy" then
+    return true
+  end
+
+  -- Biter factions
+  if game.active_mods['biter_factions'] ~= nil then
+    return string.find(force_name, "biter_faction") ~= nil
+  end
+
+  return false
+end
 --=================================--
 -- Pollution Destruction Functions --
 --=================================--
