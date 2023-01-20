@@ -1,4 +1,5 @@
 require "constants"
+require "util"
 
 -------------------
 -- Compatibility --
@@ -58,5 +59,25 @@ for _, armor in pairs(data.raw["armor"]) do
       end
     end
     addResistance({armor}, POLLUTION_DAMAGE_TYPE, math.floor((value / 1.4) / 5) * 5, math.min(20, math.max(5, math.floor(value / 4))))
+  end
+end
+
+local ignoreTypes = Set{
+  "font", "noise-layer", "gui-style", "utility-constants", "utility-sounds", "sprite", "utility-sprites",
+  "god-controller", "editor-controller", "spectator-controller", "noise-expression", "virtual-signal", "flying-text",
+  "item", "mouse-cursor", "fluid", "tile", "ambient-sound", "wind-sound", "explosion", "optimized-particle",
+  "smoke-with-trigger", "sticker", "custom-input", "fire", "particle-source", "stream", "resource", "corpse",
+  "trivial-smoke", "capsule", "module", "ammo", "gun", "item-group", "item-subgroup", "recipe", "autoplace-control",
+  "optimized-decorative", "damage-type", "ammo-category", "fuel-category", "recipe-category", "resource-category",
+  "module-category", "shortcut", "projectile", "beam", "technology", "tips-and-tricks-item"
+}
+
+for type, typeTable in pairs(data.raw) do
+  if ignoreTypes[type] == nil then
+    for name, entity in pairs(typeTable) do
+      if entity.max_health ~= nil and entity.resistances ~= nil then
+        log(type..": "..name)
+      end
+    end
   end
 end
