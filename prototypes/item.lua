@@ -9,7 +9,7 @@ incinerator_item.icon_size=64
 local toxicturret_item = util.table.deepcopy(data.raw['item']['flamethrower-turret'])
 toxicturret_item.name = "toxic-turret"
 toxicturret_item.place_result = "toxic-turret"
-incinerator_item.icon_size=64
+toxicturret_item.icon_size=64
 toxicturret_item.icons={
   {
     icon = GRAPHICS.."icons/toxic-turret.png"

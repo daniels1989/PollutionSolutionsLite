@@ -1,4 +1,10 @@
-Version: 1.0.17
+Version: 1.0.18
+Date: 2023.01.20
+  Notes:
+    - Added toxic resistance to all entities based on their fire resistance
+    - Fixed toxic turret icon size
+
+---------------------------------------------------------------------------------------------------Version: 1.0.17
 Date: 2023.01.08
   Notes:
     - Fixed crash when productivity modules had no limitations.
