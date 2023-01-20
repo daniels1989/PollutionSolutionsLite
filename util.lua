@@ -33,3 +33,9 @@ function makeNewItemFromData(_OriginalName, _NewName, _Order)
   newDataEntry.place_result = _NewName
   return newDataEntry
 end
+
+function Set (list)
+  local set = {}
+  for _, l in ipairs(list) do set[l] = true end
+  return set
+end

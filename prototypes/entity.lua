@@ -125,11 +125,6 @@ end
 
 toxicturret.attack_parameters.fluid_consumption = 3.0
 toxicturret.attack_parameters.ammo_type.action.action_delivery.stream = "toxic-flame-stream"
-table.insert(toxicturret.resistances,
-{
-  type = POLLUTION_DAMAGE_TYPE,
-  percent = 100,
-})
 toxicturret.attack_parameters.ammo_type.action.action_delivery.duration = 1*TICKS_PER_SECOND
 
 
