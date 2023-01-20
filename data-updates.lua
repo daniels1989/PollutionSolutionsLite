@@ -75,13 +75,9 @@ end
 for type, typeTable in pairs(data.raw) do
   for name, entity in pairs(typeTable) do
     if entity.max_health ~= nil and entity.resistances ~= nil then
-      local acidResistance = {percent= 0, decrease = 0}
       local fireResistance = {percent= 0, decrease = 0}
 
       for _, resistance in pairs(entity.resistances) do
-        if resistance.type == "acid" then
-          acidResistance = resistance
-        end
         if resistance.type == "fire" then
           fireResistance = resistance
         end
@@ -90,8 +86,8 @@ for type, typeTable in pairs(data.raw) do
       addResistance(
         {entity},
         POLLUTION_DAMAGE_TYPE,
-        math.max(acidResistance.percent or 0, fireResistance.percent or 0),
-        math.max(acidResistance.decrease or 0, fireResistance.decrease or 0)
+        fireResistance.percent or 0,
+        fireResistance.decrease or 0
       )
     end
   end
