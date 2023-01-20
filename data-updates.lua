@@ -25,9 +25,10 @@ end
 
 local function addResistance(entityList, _DamageType, _Percent, _Decrease)
   if not entityList or (not _Percent and not _Decrease) or (_Percent == 0 and _Decrease == 0)  then
-    log("Failed to make entity list immune.")
+    --log("Failed to make entity list immune.")
+    return
   end
-  for name,entity in pairs(entityList) do
+  for _, entity in pairs(entityList) do
     local resistTable = {
       type = _DamageType,
     }
@@ -37,11 +38,14 @@ local function addResistance(entityList, _DamageType, _Percent, _Decrease)
     if _Decrease and _Decrease ~= 0 then
       resistTable.decrease = _Decrease
     end
+
     if not entity.resistances then
-      entityList[name].resistances = {resistTable}
+      entity.resistances = {resistTable}
     else
-      table.insert(entityList[name].resistances, resistTable)
+      table.insert(entity.resistances, resistTable)
     end
+
+    log(entity.name .. " resistances: " .. serpent.dump(entity.resistances))
  end
 end
 
@@ -58,7 +62,12 @@ for _, armor in pairs(data.raw["armor"]) do
         break
       end
     end
-    addResistance({armor}, POLLUTION_DAMAGE_TYPE, math.floor((value / 1.4) / 5) * 5, math.min(20, math.max(5, math.floor(value / 4))))
+    addResistance(
+      {armor},
+      POLLUTION_DAMAGE_TYPE,
+      math.floor((value / 1.4) / 5) * 5,
+      math.min(20, math.max(5, math.floor(value / 4)))
+    )
   end
 end
 
@@ -66,7 +75,24 @@ end
 for type, typeTable in pairs(data.raw) do
   for name, entity in pairs(typeTable) do
     if entity.max_health ~= nil and entity.resistances ~= nil then
-      log(type..": "..name)
+      local acidResistance = {percent= 0, decrease = 0}
+      local fireResistance = {percent= 0, decrease = 0}
+
+      for _, resistance in pairs(entity.resistances) do
+        if resistance.type == "acid" then
+          acidResistance = resistance
+        end
+        if resistance.type == "fire" then
+          fireResistance = resistance
+        end
+      end
+
+      addResistance(
+        {entity},
+        POLLUTION_DAMAGE_TYPE,
+        math.max(acidResistance.percent or 0, fireResistance.percent or 0),
+        math.max(acidResistance.decrease or 0, fireResistance.decrease or 0)
+      )
     end
   end
 end
