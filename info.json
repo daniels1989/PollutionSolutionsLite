@@ -1,7 +1,7 @@
 {
 	"name": "PollutionSolutionsLite",
 	"author": "daniels1989, Tynatyna, Keyboarg91, Thalassicus",
-	"version": "1.0.18",
+	"version": "1.0.19",
 	"factorio_version": "1.1",
 	"title": "Pollution Solutions Lite",
 	"homepage": "",
@@ -9,6 +9,7 @@
 	"dependencies": [
 		"base >= 1.1.0",
 		"(?) biter_factions >= 0.1.6",
+		"(?) k2-flare-stack >= 1.0.0",
 		"(?) modmashsplinterresources >= 1.1.13",
 		"(?) NauvisDay >= 1.148.1",
 		"(?) nauvis-melange >= 0.11.0",
