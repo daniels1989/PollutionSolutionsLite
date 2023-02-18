@@ -14,7 +14,7 @@ local toxicsludge = {
 local pollution = {
   type = "fluid",
   name = "polluted-air",
-  auto_barrel = false,
+  auto_barrel = true,
   base_color = {r=0.500, g=0.000, b=0.000},
   flow_color = {r=1.00, g=0.000, b=0.000},
   icon = GRAPHICS.."icons/fluid/pollution.png",

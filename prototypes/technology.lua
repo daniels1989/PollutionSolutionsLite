@@ -82,11 +82,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-toxic-sludge-barrel"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "empty-toxic-sludge-barrel"
+        recipe = "heat-pipe"
       },
     },
     order = "c-a"
