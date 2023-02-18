@@ -223,8 +223,6 @@ dumpsmoke.render_layer = "higher-object-under"
 
 
 data:extend({
-  --airfilterSmoke,
-  --airfilter,
   incineratorsmoke,
   incinerator,
   toxicturret,
