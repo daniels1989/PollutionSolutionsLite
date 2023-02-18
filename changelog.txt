@@ -2,6 +2,8 @@ Version: 1.0.19
 Date: 2023.02.19
   Notes:
     - Added compatibility with K2 Flare Stack, increasing pollution output when getting rid of polluted air or toxic sludge
+    - Added heat pipe recipe unlock to the incineration technology
+    - Polluted Air can now be barreled
 
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.18
