@@ -88,3 +88,29 @@ data:extend({
     order = "c-a"
   },
 })
+{
+  type = "technology",
+  name = "better-incineration",
+  icon = GRAPHICS.."icons/better-incineration.png",
+  icon_size = 128,
+  prerequisites = {"incineration"},
+  unit =
+  {
+    count = 200,
+    ingredients =
+    {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1}
+    },
+    time = 60
+  },
+  effects =
+  {
+    {
+      type = "unlock-recipe",
+      recipe = "learned-liquify"
+    },
+  },
+  order = "c-a"
+},
+})

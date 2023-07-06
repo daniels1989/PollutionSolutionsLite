@@ -1,3 +1,12 @@
+Version: 1.0.21
+Date: 2023.07.06
+  Notes:
+    - Forked from daniels1989, this is only possible with their work and predecessors work. I will remove this fork if this is impleneted into daniels1989 master project
+    - Added new technology "Pollution Lessons Learned", representing a furtherance of the orginal task and function of the aliens pollution sucking ability
+    - Added new recipe, unlocked with the new technology, for Chemical Plant called "Better Toxic Sludge", removing need for Xenomass as synthetic filters have been developed to mimic the function
+
+---------------------------------------------------------------------------------------------------
+
 Version: 1.0.20
 Date: 2023.03.27
   Notes:

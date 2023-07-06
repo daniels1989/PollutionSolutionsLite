@@ -114,6 +114,36 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "learned-liquify",
+    category = "chemistry",
+    enabled = false,
+    energy_required = 20,
+    ingredients =
+    {
+      {type="item", name="coal", amount=FILTER_PER_LIQUIFY * 5},
+      {type="item", name="stone", amount=FILTER_PER_LIQUIFY * 10},
+      {type="fluid", name="polluted-air", amount=SLUDGE_PER_FILTER * AIR_PER_SLUDGE},
+      {type="fluid", name="water", amount=SLUDGE_PER_FILTER * WATER_PER_FILTER_PERCENT * 1.5},
+    },
+    results=
+    {
+      {type="fluid", name="toxic-sludge", amount=SLUDGE_PER_FILTER},
+    },
+    main_product= "",
+    icon = GRAPHICS.."icons/fluid/bettertoxicsludge.png",
+    icon_size = 64,
+    subgroup = "fluid-recipes",
+    order = "z",
+    crafting_machine_tint =
+    {
+      primary = {r = 0.768, g = 0.300, b = 0.768, a = 1.000}, -- #c3a0c3ff
+      secondary = {r = 0.659, g = 0.300, b = 0.678, a = 1.000}, -- #a896acff
+      tertiary = {r = 0.774, g = 0.300, b = 0.766, a = 1.000}, -- #c5a0c3ff
+      quaternary = {r = 0.564, g = 0.180, b = 0.564, a = 1.000}, -- #8f5c8fff
+    }
+  },
+  {
+    type = "recipe",
     name = "toxic-waste-treatment",
     category = "chemistry",
     energy_required = 1,
