@@ -1,4 +1,4 @@
-GRAPHICS = '__PollutionSolutionsLite__/graphics/';
+GRAPHICS = '__PollutionSolutionsLiteWLearnedResearch__/graphics/';
 
 --=========--
 -- Control --
