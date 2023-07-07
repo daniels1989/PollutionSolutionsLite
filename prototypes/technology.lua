@@ -85,9 +85,8 @@ data:extend({
         recipe = "heat-pipe"
       },
     },
-    order = "c-a"
+    order = "c-b"
   },
-})
 {
   type = "technology",
   name = "better-incineration",
@@ -111,5 +110,6 @@ data:extend({
       recipe = "learned-liquify"
     },
   },
-  order = "c-a"
+  order = "c-c"
 },
+})
