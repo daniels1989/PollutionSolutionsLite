@@ -109,6 +109,10 @@ data:extend({
       type = "unlock-recipe",
       recipe = "learned-liquify"
     },
+    {
+      type = "unlock-recipe",
+      recipe = "syntheticpollutioncollector"
+    },
   },
   order = "c-c"
 },

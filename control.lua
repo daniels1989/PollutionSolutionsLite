@@ -43,6 +43,9 @@ function PollutionSolutions.InitGlobals()
     for _,entity in pairs(surface.find_entities_filtered{name=POLLUTION_COLLECTOR_NAME}) do
       AddPollutionCollector(entity)
     end
+    for _,entity in pairs(surface.find_entities_filtered{name=SYNTHETIC_POLLUTION_COLLECTOR_NAME}) do
+      AddPollutionCollector(entity)
+    end
     for _,entity in pairs(surface.find_entities_filtered{name={"red-xenomass", "blue-xenomass"}}) do
       global.spilledLoot[entity] = game.forces.neutral
     end
@@ -283,7 +286,13 @@ end
 --===============================--
 
 function IsPollutionCollector(entity)
-  return entity.name == POLLUTION_COLLECTOR_NAME
+  if entity.name == POLLUTION_COLLECTOR_NAME then
+    return entity.name == POLLUTION_COLLECTOR_NAME
+  end
+  if entity.name == SYNTHETIC_POLLUTION_COLLECTOR_NAME then
+    return entity.name == SYNTHETIC_POLLUTION_COLLECTOR_NAME
+  end
+--return entity.name == POLLUTION_COLLECTOR_NAME
 end
 
 function AddPollutionCollector(entity)

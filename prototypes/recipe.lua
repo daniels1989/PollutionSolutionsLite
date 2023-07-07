@@ -176,6 +176,7 @@ data:extend({
 local newProducts = {
   "toxic-waste-treatment",
   "liquify-pollution",
+  "learned-liquify",
   "blue-xenomass",
 }
 

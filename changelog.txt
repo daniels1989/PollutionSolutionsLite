@@ -1,3 +1,10 @@
+Version: 1.0.22
+Date: 2023.07.07
+  Notes:
+    - Added new recipe, unlocked with the "Pollutions Lessons Learned" technology, for a Pollution Collector that uses cultivated materials and doesn't need Xenomass to be built.
+
+---------------------------------------------------------------------------------------------------
+
 Version: 1.0.21
 Date: 2023.07.06
   Notes:
