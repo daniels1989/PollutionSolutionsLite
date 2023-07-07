@@ -6,6 +6,7 @@ require("prototypes.item")
 require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.pollutioncollector")
+require("prototypes.syntheticpollutioncollector")
 require("prototypes.hevsuit")
 if mods["k2-flare-stack"] then
 	flare_stack.flare_stack_util.addBurnFluidEmissionsMultiplier("polluted-air", 600)
