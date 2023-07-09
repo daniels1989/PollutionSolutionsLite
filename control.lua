@@ -144,9 +144,9 @@ function EntityDied(event)
 
   if loot.count >= 1 then
     if isArtillery then
-      if isArtillery then
-        log(event.cause.type.." from force "..event.force.name.." killed "..alien.name..".")
-      end
+      --if isArtillery then
+        --log(event.cause.type.." from force "..event.force.name.." killed "..alien.name..".")
+      --end
       alien.surface.spill_item_stack(alien.position, loot, true, event.force)
       return
     else
