@@ -54,7 +54,7 @@ end
 -----------------
 
 for _, armor in pairs(data.raw["armor"]) do
-  if armor.name ~= "hev-armor" then
+  if armor.name ~= "hev-armor" and armor.resistances ~= nil then
     local value = 0
     for _, resistance in pairs(armor.resistances) do
       if resistance.type == "acid" then
