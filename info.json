@@ -18,5 +18,9 @@
 		"! PollutionSolutions_nocombat",
 		"! PollutionSolutionsFix",
 		"! PollutionSolutionsFixFork"
-	]
+	],
+	"package": {
+		"ignore": ["**/*.psd"],
+		"zipLocation": "outside"
+	}
 }
