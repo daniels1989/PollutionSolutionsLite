@@ -35,5 +35,7 @@ data:extend({
     icon_size = 64,
     order = "a[fluid]-b[toxicsludge]",
     default_temperature = 15,
+    fuel_value = "20MJ",
+    heat_capacity = "10MJ"
   },
 })
