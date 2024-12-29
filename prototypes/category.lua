@@ -5,6 +5,6 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "pollution"
+    name = "airborne-pollutant"
   },
 })
