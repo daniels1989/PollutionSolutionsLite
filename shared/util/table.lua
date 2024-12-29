@@ -24,6 +24,17 @@ function TableUtils.key_exists(table, needle)
 	return false
 end
 
+---@param table table
+function TableUtils.search(table, needle)
+	for key, value in pairs(table) do
+		if value == needle then
+			return key
+		end
+	end
+
+	return nil
+end
+
 ---@param table1 table
 ---@param table2 table
 function TableUtils.merge(table1, table2)
