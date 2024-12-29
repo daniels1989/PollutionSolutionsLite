@@ -1,4 +1,5 @@
-require("constants")
+require "constants"
 
-require("prototypes.category")
-require("prototypes.fluid")
+require "prototypes/category"
+require "prototypes/fluid"
+require "prototypes/surface-property"
