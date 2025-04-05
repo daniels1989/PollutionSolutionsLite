@@ -47,12 +47,18 @@ for _, pollutant in pairs(data.raw[POLLUTANT]) do
 					r = pollutant.chart_color.r,
 					g = pollutant.chart_color.g,
 					b = pollutant.chart_color.b,
+					a = pollutant.chart_color.a * 0.6
 				},
 				icons = {
 					{
 						icon = "__base__/graphics/icons/fluid/steam.png",
 						icon_size = 64,
-						tint = pollutant.chart_color
+						tint = {
+							r = pollutant.chart_color.r,
+							g = pollutant.chart_color.g,
+							b = pollutant.chart_color.b,
+							a = pollutant.chart_color.a * 0.6
+						}
 					}
 				},
 				order = "a[fluid]-b[" .. POLLUTANT .. "]-a[" .. pollutant.name .. "]",
@@ -66,7 +72,12 @@ for _, pollutant in pairs(data.raw[POLLUTANT]) do
 					{
 						icon = "__base__/graphics/icons/fluid/steam.png",
 						icon_size = 64,
-						tint = pollutant.chart_color
+						tint = {
+							r = pollutant.chart_color.r,
+							g = pollutant.chart_color.g,
+							b = pollutant.chart_color.b,
+							a = pollutant.chart_color.a * 0.6
+						}
 					}
 				},
 				flags = {
@@ -74,7 +85,8 @@ for _, pollutant in pairs(data.raw[POLLUTANT]) do
 					"placeable-off-grid", -- needs to be off center
 					"not-on-map"     -- to not show it on the map
 				},
-				category = "basic-fluid",
+				stage_counts = {},
+				category = "airborne-pollutant",
 				subgroup = "mineable-fluids",
 				order = "a-b-a",
 				infinite = true,

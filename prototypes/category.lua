@@ -4,7 +4,7 @@ data:extend({
     name = "toxic",
   },
   {
-    type = "recipe-category",
+    type = "resource-category",
     name = "airborne-pollutant"
   },
 })
