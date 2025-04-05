@@ -8,6 +8,7 @@
 	"description": "This makes Factorio more fun by turning pollution and combat into an interconnected system you actively engage with, instead of just tossing down laser turrets and forgetting about both. This minimalist mod stays close to the vanilla experience, adding only what's necessary to accomplish these goals.",
 	"dependencies": [
 		"base >= 2.0.7",
+		"? space-age >= 2.0.7",
 		"(?) biter_factions >= 0.1.6",
 		"(?) k2-flare-stack >= 1.0.0",
 		"(?) modmashsplinterresources >= 1.1.13",
