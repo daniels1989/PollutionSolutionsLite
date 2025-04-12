@@ -64,56 +64,6 @@ for _, pollutant in pairs(data.raw[POLLUTANT]) do
 				order = "a[fluid]-b[" .. POLLUTANT .. "]-a[" .. pollutant.name .. "]",
 				default_temperature = 15,
 				gas_temperature = -195,
-			},
-			{
-				type = "resource",
-				name = pollutant.name,
-				icons = {
-					{
-						icon = "__base__/graphics/icons/fluid/steam.png",
-						icon_size = 64,
-						tint = {
-							r = pollutant.chart_color.r,
-							g = pollutant.chart_color.g,
-							b = pollutant.chart_color.b,
-							a = pollutant.chart_color.a * 0.6
-						}
-					}
-				},
-				flags = {
-					"placeable-neutral", -- default for resource
-					"placeable-off-grid", -- needs to be off center
-					"not-on-map"     -- to not show it on the map
-				},
-				stage_counts = {},
-				category = "airborne-pollutant",
-				subgroup = "mineable-fluids",
-				order = "a-b-a",
-				infinite = true,
-				highlight = false,
-				minimum = 100,
-				normal = 100,
-				infinite_depletion_amount = 0,
-				resource_patch_search_radius = 0, -- needed to not be highlighted on the map
-				minable =
-				{
-					mining_time = 1,
-					results =
-					{
-						{
-							type = "fluid",
-							name = pollutant.name,
-							amount_min = 100,
-							amount_max = 100,
-							probability = 1
-						}
-					}
-				},
-				collision_box = { { -0.49, -0.49 }, { 0.49, 0.49 } },
-				selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-				selectable_in_game = false,
-				map_color = { 0.78, 0.2, 0.77 },
-				map_grid = false
 			}
 		})
 	end
