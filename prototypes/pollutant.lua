@@ -83,18 +83,28 @@ for _, pollutant in pairs(data.raw[POLLUTANT]) do
 				flags = {
 					"placeable-neutral", -- default for resource
 					"placeable-off-grid", -- needs to be off center
-					"not-on-map"     -- to not show it on the map
+					-- "not-on-map"     -- to not show it on the map
 				},
-				stage_counts = {},
-				category = "airborne-pollutant",
+				stage_counts = {0},
+    stages =
+    {
+      sheet = util.sprite_load("__base__/graphics/entity/crude-oil/crude-oil",
+      {
+        priority = "extra-high",
+        scale = 0.5,
+        variation_count = 1,
+        frame_count = 4,
+      })
+    },
+				category = POLLUTANT,
 				subgroup = "mineable-fluids",
 				order = "a-b-a",
 				infinite = true,
-				highlight = false,
+				highlight = true,
 				minimum = 100,
 				normal = 100,
 				infinite_depletion_amount = 0,
-				resource_patch_search_radius = 0, -- needed to not be highlighted on the map
+				resource_patch_search_radius = 14, -- needed to not be highlighted on the map
 				minable =
 				{
 					mining_time = 1,
@@ -111,7 +121,7 @@ for _, pollutant in pairs(data.raw[POLLUTANT]) do
 				},
 				collision_box = { { -0.49, -0.49 }, { 0.49, 0.49 } },
 				selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-				selectable_in_game = false,
+				selectable_in_game = true,
 				map_color = { 0.78, 0.2, 0.77 },
 				map_grid = false
 			}
